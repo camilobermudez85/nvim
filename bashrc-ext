@@ -1,0 +1,19 @@
+#!/bin/bash
+
+if [ -d "$HOME/.pyenv" ]; then
+	export PYENV_ROOT="$HOME/.pyenv"
+	export PATH="$PYENV_ROOT/bin:$PATH"
+	eval "$(pyenv init -)"
+
+	if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenv" ]; then
+		eval "$(pyenv virtualenv-init -)"
+		workon_home="~/.pyenv/ve"
+		project_home="~/src"
+		export WORKON_HOME=${workon_home}
+		export PROJECT_HOME=${project_home}
+
+		if [ -d "$HOME/.pyenv/plugins/pyenv-virtualenvwrapper" ]; then
+			pyenv virtualenvwrapper_lazy
+		fi
+	fi
+fi
