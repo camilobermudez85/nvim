@@ -36,6 +36,8 @@ endif
 
 " Python auto-completion
 Plug 'zchee/deoplete-jedi'
+" Vim auto-completion
+Plug 'Shougo/neco-vim'
 
 call plug#end()
 
