@@ -23,7 +23,7 @@ Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 
 " NERDTree
-" Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/nerdtree'
 
 " Deoplete auto-completion
 if has('nvim')
@@ -56,6 +56,12 @@ colorscheme jellybeans
 
 let g:python_host_prog = '/home/camilo/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/camilo/.pyenv/versions/neovim3/bin/python'
+
+" NERDTree configuration
+"nnoremap - :Explore %:p:h<CR>
+let g:NERDTreeWinSize = 40
+nnoremap <c-n> :NERDTreeToggle<CR>
+nnoremap <c-p> :NERDTreeFind %:p<CR>
 
 " Deoplete configuration
 let g:deoplete#enable_at_startup = 1
