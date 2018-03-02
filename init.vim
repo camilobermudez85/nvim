@@ -3,6 +3,8 @@ set number
 set relativenumber
 set inccommand=split
 
+" Tabs config
+:nnoremap <F5> :buffers<CR>:buffer<Space>
 
 " Specify a directory for plugins
 " " - For Neovim: ~/.local/share/nvim/plugged
@@ -21,7 +23,7 @@ Plug 'jreybert/vimagit'
 Plug 'tpope/vim-fugitive'
 
 " NERDTree
-Plug 'scrooloose/nerdtree'
+" Plug 'scrooloose/nerdtree'
 
 " Deoplete auto-completion
 if has('nvim')
@@ -55,5 +57,6 @@ colorscheme jellybeans
 let g:python_host_prog = '/home/camilo/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/camilo/.pyenv/versions/neovim3/bin/python'
 
+" Deoplete configuration
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#jedi#show_docstring = 1
