@@ -59,6 +59,9 @@ colorscheme jellybeans
 let g:python_host_prog = '/home/camilo/.pyenv/versions/neovim2/bin/python'
 let g:python3_host_prog = '/home/camilo/.pyenv/versions/neovim3/bin/python'
 
+" Vimagit configuration
+nnoremap <c-m> :Magit<CR>
+
 " NERDTree configuration
 "nnoremap - :Explore %:p:h<CR>
 let g:NERDTreeWinSize = 40
